@@ -12,7 +12,7 @@ public class Main {
 	        grafo.agregarVertice(5);
 	        grafo.agregarVertice(6);
 	        grafo.agregarVertice(7);
-	        grafo.agregarVertice(8);
+//	        grafo.agregarVertice(8);
 	        // grafo.agregarVertice(9);
 	        // grafo.agregarVertice(10);
 	        // grafo.agregarVertice(11);
@@ -24,9 +24,12 @@ public class Main {
 
 	        grafo.agregarArco(1, 2, 10);
 	        grafo.agregarArco(1, 3, 20);
-	        grafo.agregarArco(2, 4, 30);
-	        grafo.agregarArco(4, 1, 40);
-	        grafo.agregarArco(1, 5, 50);
+	        grafo.agregarArco(2, 5, 30);
+	        grafo.agregarArco(3, 4, 40);
+	        grafo.agregarArco(4, 5, 50);
+	        grafo.agregarArco(5, 6, 50);
+	        grafo.agregarArco(5, 7, 50);
+
 	       
 //	        grafo.agregarArco(2, 5, 60);
 //	        grafo.agregarArco(5, 4, 70);
@@ -78,7 +81,9 @@ public class Main {
 //	        System.out.println(grafo.obtenerArco(1, 5)); //NO ANDA RETORNA NULL
 //	        System.out.println(grafo.obtenerArcos());
 //	        System.out.println(grafo.obtenerVertices());
-	          ServicioDFS dfs = new ServicioDFS(grafo);   
-	          System.out.println(dfs.sDFS());
+//	          ServicioDFS dfs = new ServicioDFS(grafo);   
+//	          System.out.println(dfs.sDFS());
+	          ServicioBFS bfs = new ServicioBFS(grafo);
+	          System.out.println(bfs.ServicioBFS());
 	}
 }
