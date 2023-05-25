@@ -23,17 +23,17 @@ public class Main {
 	        grafo.agregarArco(5, 7, 50);
 
 	            
-//	        System.out.println(grafo.cantidadArcos());
+	        System.out.println(grafo.cantidadArcos());
 //	        System.out.println(grafo.existeArco(1, 3));
 //	        System.out.println(grafo.existeArco(1, 5));
 //	       
 //	        System.out.println(grafo.cantidadVertices());
 //	        System.out.println(grafo.contieneVertice(6));
 //	        System.out.println(grafo.contieneVertice(9));
-//	        
+         grafo.borrarVertice(1);
 //	        grafo.borrarArco(1, 3);
-//	        System.out.println(grafo.cantidadArcos());
-//	        grafo.borrarVertice(8);
+       System.out.println(grafo.cantidadArcos());
+	       
 //	        System.out.println(grafo.cantidadVertices());
 //	        
        //System.out.println(grafo.obtenerAdyacentes(1));
@@ -42,8 +42,8 @@ public class Main {
 //	        System.out.println(grafo.obtenerVertices());
 //	          ServicioDFS dfs = new ServicioDFS(grafo);   
 //	          System.out.println(dfs.sDFS());
-          ServicioBFS bfs = new ServicioBFS(grafo);
-        System.out.println(bfs.ServicioBFS());
+        //  ServicioBFS bfs = new ServicioBFS(grafo);
+        //System.out.println(bfs.ServicioBFS());
 //	        ServicioCaminos<Integer> servicioCaminos = new ServicioCaminos<>(grafo, 1, 7, 5);
 //	        System.out.println(servicioCaminos.caminos());
 	}
