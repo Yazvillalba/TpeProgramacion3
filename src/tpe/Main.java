@@ -83,7 +83,9 @@ public class Main {
 //	        System.out.println(grafo.obtenerVertices());
 //	          ServicioDFS dfs = new ServicioDFS(grafo);   
 //	          System.out.println(dfs.sDFS());
-	          ServicioBFS bfs = new ServicioBFS(grafo);
-	          System.out.println(bfs.ServicioBFS());
+//	          ServicioBFS bfs = new ServicioBFS(grafo);
+//	          bfs.ServicioBFS();
+	        ServicioCaminos<Integer> servicioCaminos = new ServicioCaminos<>(grafo, 1, 7, 5);
+	        System.out.println(servicioCaminos.caminos());
 	}
 }
