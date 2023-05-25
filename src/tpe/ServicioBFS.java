@@ -18,9 +18,9 @@ public class ServicioBFS {
         this.fila =new LinkedList<>();
 	}
 	
-	public void ServicioBFS() { //se puede hacer void
+	public List<Integer> ServicioBFS() { //se puede hacer void
 	
-		//List<Integer> lista= new ArrayList<>();
+		List<Integer> lista= new ArrayList<>();
 		Iterator<Integer> vertices = grafo.obtenerVertices();
 		while(vertices.hasNext()) {
 			hashMap.put(vertices.next(), false);		
@@ -31,10 +31,10 @@ public class ServicioBFS {
 			Integer vertice = vertices.next();
 			if(hashMap.get(vertice) == false) {
 //				aux.addAll(bfsForest(vertice));
-				fila.addAll(bfsForest(vertice));
+				lista.addAll(bfsForest(vertice));
 			}
 		}
-		System.out.println(fila);
+		return lista;
 	}
 	private List<Integer> bfsForest(Integer v){
 		List<Integer> aux = new LinkedList<>();
@@ -50,7 +50,7 @@ public class ServicioBFS {
 				Integer vertice = h.next();
 			//	aux.add(vertice);
 				if(hashMap.get(vertice) == false) {
-					// fila.add(vertice); CON ESTO IMPRIME 1 2 3 4 5 6 7 Y DEBERIA SER 1235467
+					// fila.add(vertice); 
 				
 					 hashMap.put(vertice, true);
 					 fila.add(vertice); 
