@@ -22,4 +22,9 @@ public class Arco <T>{
 	public T getEtiqueta() {
 		return etiqueta;
 	}
+	@Override
+	public String toString() {
+		// TODO Auto-generated method stub
+		return ("origen: " + this.verticeOrigen + " destino: " + this.verticeDestino + " etiqueta: " + this.etiqueta);
+	}
 }

@@ -37,27 +37,23 @@ public class ServicioCaminos<T> {
 	}  
 	
 	private void servicioCamino(int origen, List<Integer> caminoParcial) {
-//		List<Integer> caminoParcial = new LinkedList<>();
-		Iterator<Arco<T>> adyacentes = this.grafo.obtenerArcos(origen);
+	    Iterator<Arco<T>> adyacentes = this.grafo.obtenerArcos(origen);
 
-		if(origen == destino) {
-			if(this.arcosV.size() <= this.lim) {
-				this.camino.add(new LinkedList<>(caminoParcial));
-			}
-		}else {
-			while (adyacentes.hasNext()) {
-				Arco<T> arco = adyacentes.next();
-				Integer vertice = arco.getVerticeDestino();
-				if(!arcosV.contains(arco)) {
-					caminoParcial.add(vertice);
-					arcosV.add(arco);
-					servicioCamino(vertice, caminoParcial);
-					caminoParcial.remove(caminoParcial.get(caminoParcial.size()-1));
-					arcosV.remove(arco);
-				}
-				
-			}
-		}
-		
+	    while (adyacentes.hasNext()) {
+	        Arco<T> arco = adyacentes.next();
+	        Integer vertice = arco.getVerticeDestino();
+	        if (!arcosV.contains(arco)) {
+	            List<Integer> nuevoCaminoParcial = new LinkedList<>(caminoParcial);
+	            nuevoCaminoParcial.add(vertice);
+	            arcosV.add(arco);
+	            if (vertice == destino && arcosV.size() <= lim) {
+	                this.camino.add(new LinkedList<>(nuevoCaminoParcial));
+	            }
+	            servicioCamino(vertice, nuevoCaminoParcial);
+	            arcosV.remove(arco);
+	        }
+	    }
 	}
+
+	
 }

@@ -13,7 +13,7 @@ public class GrafoDirigido<T> implements Grafo<T> {
 	public void agregarVertice(int verticeId) {
 		// corroborar q no este y agregarlo
 		if (!contieneVertice(verticeId)) {
-			//hashMap.put(verticeId, null);
+
 			hashMap.put(verticeId, new ArrayList<Arco<T>>());
 		} else {
 			System.out.println("No se pueden agregar vertices repetidos");
@@ -68,7 +68,7 @@ public class GrafoDirigido<T> implements Grafo<T> {
 		if (contieneVertice(verticeId1)) {
 			for (Arco<T> i : hashMap.get(verticeId1)) {
 				if (i.getVerticeDestino() == verticeId2) {
-					return i;   //RETORNA SIEMPRE NULLL
+					return i;  
 				}
 			}
 		}
@@ -92,8 +92,6 @@ public class GrafoDirigido<T> implements Grafo<T> {
 
 	@Override
 	public Iterator<Integer> obtenerVertices() {
-//		ArrayList<Integer> keys = new ArrayList<Integer>();
-//		keys.addAll(hashMap.keySet());
 		Set <Integer> keys = hashMap.keySet();
 		return keys.iterator();
 	}
@@ -101,7 +99,7 @@ public class GrafoDirigido<T> implements Grafo<T> {
 	@Override
 	public Iterator<Integer> obtenerAdyacentes(int verticeId) {
 		ArrayList<Integer> aux = new ArrayList<Integer>();
-		for (Arco<T> i : this.hashMap.get(verticeId)) { //va con this o sin this?
+		for (Arco<T> i : this.hashMap.get(verticeId)) {
 			aux.add(i.getVerticeDestino());
 				
 		}
@@ -120,7 +118,7 @@ public class GrafoDirigido<T> implements Grafo<T> {
 	}
 
 	@Override
-	public Iterator<Arco<T>> obtenerArcos(int verticeId) { //no entiendo bien
+	public Iterator<Arco<T>> obtenerArcos(int verticeId) { 
 		ArrayList<Arco<T>> aux = new ArrayList<Arco<T>>();
 		if(contieneVertice(verticeId)) {
 			return this.hashMap.get(verticeId).iterator();

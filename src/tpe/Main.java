@@ -20,31 +20,32 @@ public class Main {
 	        grafo.agregarArco(3, 4, 40);
 	        grafo.agregarArco(4, 5, 50);
 	        grafo.agregarArco(5, 6, 50);
-	        grafo.agregarArco(5, 7, 50);
-
 	            
-	        System.out.println(grafo.cantidadArcos());
+//	        System.out.println(grafo.cantidadArcos());
 //	        System.out.println(grafo.existeArco(1, 3));
 //	        System.out.println(grafo.existeArco(1, 5));
 //	       
 //	        System.out.println(grafo.cantidadVertices());
 //	        System.out.println(grafo.contieneVertice(6));
 //	        System.out.println(grafo.contieneVertice(9));
-         grafo.borrarVertice(1);
+//	    	grafo.borrarVertice(1);
 //	        grafo.borrarArco(1, 3);
-       System.out.println(grafo.cantidadArcos());
+//	        System.out.println(grafo.cantidadArcos());
 	       
 //	        System.out.println(grafo.cantidadVertices());
 //	        
-       //System.out.println(grafo.obtenerAdyacentes(1));
-//	        System.out.println(grafo.obtenerArco(1, 5)); //NO ANDA RETORNA NULL
-//	        System.out.println(grafo.obtenerArcos());
+//	        System.out.println(grafo.obtenerAdyacentes(1));
+//	        System.out.println(grafo.obtenerArco(1, 2)); 
+//	        System.out.println(grafo.obtenerArco(1, 5));
 //	        System.out.println(grafo.obtenerVertices());
-//	          ServicioDFS dfs = new ServicioDFS(grafo);   
-//	          System.out.println(dfs.sDFS());
-        //  ServicioBFS bfs = new ServicioBFS(grafo);
-        //System.out.println(bfs.ServicioBFS());
-//	        ServicioCaminos<Integer> servicioCaminos = new ServicioCaminos<>(grafo, 1, 7, 5);
+//	        ServicioDFS dfs = new ServicioDFS(grafo);   
+//	        System.out.println(dfs.sDFS());
+//  		ServicioBFS bfs = new ServicioBFS(grafo);
+//          System.out.println(bfs.ServicioBFS());
+	        
+//	        ServicioCaminos<Integer> servicioCaminos = new ServicioCaminos<>(grafo, 2,5 ,5 );
 //	        System.out.println(servicioCaminos.caminos());
+	        ServicioCaminos<Integer> servicioCaminos = new ServicioCaminos<>(grafo, 1, 7, 5);
+	        System.out.println(servicioCaminos.caminos());
 	}
 }

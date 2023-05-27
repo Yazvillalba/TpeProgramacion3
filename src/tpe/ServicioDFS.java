@@ -33,7 +33,7 @@ public class ServicioDFS {
 	
 	}
 	private List<Integer> dfsForest(Integer v){
-	    List<Integer> salida = new LinkedList<>(); //se puede esto?
+	    List<Integer> salida = new LinkedList<>(); 
 	    List<Integer> aux = new LinkedList<>();
 	    hashMap.put(v, "amarillo");
 		
